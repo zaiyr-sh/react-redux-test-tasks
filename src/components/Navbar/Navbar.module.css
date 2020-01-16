@@ -1,0 +1,126 @@
+/*Container*/
+.container {
+	width: 100%;
+	max-width: 1200px;
+
+	margin: 0 auto;
+}
+
+/*Header*/
+.header {
+	position: absolute;
+
+	padding-top: 30px;
+	width: 100%;
+
+	top: 0;
+	left: 0;
+	right: 0;
+
+	z-index: 1000;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__avatar {
+	display: inline-flex;
+	height: 30px;
+
+	font-size: 16px;
+	font-weight: 700;
+
+	color: #2b2a2c;
+}
+
+.header__img {
+	width: 45px;
+	height: 45px;
+
+	border: 2px solid #2b2a2c;
+	border-radius: 50%;
+}
+
+.header__data {
+	padding: 0 10px;
+}
+
+.header__name {
+	line-height: 15px;
+}
+
+.header__surname {
+	line-height: 12px;
+}
+
+.header__title {
+	height: 12px;
+
+	color: #6a696b;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 15px;
+}
+
+/*Nav*/
+.nav {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+
+	position: relative;
+
+	margin: 0 15px;
+
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16.84px;
+
+	letter-spacing: 0.7px;
+
+	color: #111;
+	text-decoration: none;
+
+	transition: color .1s linear;
+}
+
+.nav__link:after {
+	content: '';
+	display: block;
+
+	position: absolute;
+
+	width: 100%;
+	height: 3px;
+
+	background-color: #2b2a2c;
+	opacity: 0;
+
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+	color: #111;
+}
+
+.nav__link:hover:after,
+.nav__link.activeLink:after {
+	opacity: 1;
+}
+
+.nav__link.activeLink {
+	color: #111;
+}
+
